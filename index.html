@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать файл by qw3nty 0w0</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(162, 135, 118); /* Цвет фона по RGB */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .download-button:hover {
+            background-color: #45a049;
+        }
+
+        .file-info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .download-timer {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Скачать файл <span>by qw3nty 0w0</span></h1>
+        <a href="#" class="download-button">СКАЧАТЬ</a>
+        <div class="file-info">
+            <p><strong>Имя:</strong> файл_by_qw3nty_0w0.txt</p>
+            <p><strong>Тип:</strong> Текстовый файл (".txt")</p>
+            <p><strong>Размер:</strong> 19.9 Kb</p>
+        </div>
+        <div class="download-timer">
+            <p>Скачивание начнётся через: <span id="timer">10</span> секунд(ы)</p>
+        </div>
+    </div>
+    <script>
+        let countdown = 10;
+        const timerElement = document.getElementById('timer');
+
+        const countdownInterval = setInterval(() => {
+            if (countdown > 0) {
+                countdown--;
+                timerElement.textContent = countdown;
+            } else {
+                clearInterval(countdownInterval);
+                document.querySelector('.download-button').setAttribute('href', 'path/to/your/file.txt');
+                document.querySelector('.download-button').textContent = 'СКАЧАТЬ';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
